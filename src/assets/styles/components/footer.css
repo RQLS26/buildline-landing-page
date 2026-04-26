@@ -22,7 +22,7 @@
 .signup-shell__art {
   position: absolute;
   bottom: 44px;
-  width: min(36vw, 540px);
+  width: min(28vw, 420px);
   height: auto;
   pointer-events: none;
   user-select: none;
