@@ -59,7 +59,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-400);
-  max-width: 1168px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 22px 16px 10px;
   flex-wrap: nowrap;

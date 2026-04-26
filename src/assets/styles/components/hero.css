@@ -21,7 +21,7 @@
 
 .hero h1 {
   font-family: var(--font-family-display);
-  max-width: 960px;
+  max-width: 1100px;
   margin-inline: auto;
   font-size: clamp(36px, 4.6vw, 64px);
   font-weight: var(--font-weight-regular);
@@ -37,7 +37,7 @@
   font-weight: var(--font-weight-regular);
   color: #6d6d72;
   line-height: 1.4;
-  max-width: 780px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -49,7 +49,7 @@
   position: relative;
   width: 100%;
   max-width: 1180px;
-  height: 820px;
+  height: 920px;
   margin: 28px auto 0;
 }
 
@@ -71,6 +71,7 @@
 }
 
 @media (min-width: 1024px) {
+
   body.motion-enabled .hero__centerpiece,
   body.motion-enabled .dash-card {
     opacity: 0;
@@ -165,7 +166,7 @@
    ========================================================================== */
 
 .dash-card--balance {
-  left: -20px;
+  left: 5px;
   top: 40px;
   width: 340px;
   padding: 22px 24px;
@@ -328,9 +329,17 @@
   box-shadow: var(--shadow-md);
 }
 
-.bar-list__icon--orange { background: #ffeada; }
-.bar-list__icon--green  { background: #ddf9e4; }
-.bar-list__icon--blue   { background: #e4f0ff; }
+.bar-list__icon--orange {
+  background: #ffeada;
+}
+
+.bar-list__icon--green {
+  background: #ddf9e4;
+}
+
+.bar-list__icon--blue {
+  background: #e4f0ff;
+}
 
 .bar-list__label {
   grid-column: 2;
@@ -357,9 +366,17 @@
   border-radius: 999px;
 }
 
-.bar__fill--orange { background: #ff8a3c; }
-.bar__fill--green  { background: #2bc255; }
-.bar__fill--blue   { background: #70a6e8; }
+.bar__fill--orange {
+  background: #ff8a3c;
+}
+
+.bar__fill--green {
+  background: #2bc255;
+}
+
+.bar__fill--blue {
+  background: #70a6e8;
+}
 
 .bar-list__value {
   grid-column: 3;
@@ -376,7 +393,7 @@
 
 .dash-card--contributors {
   left: -40px;
-  top: 400px;
+  top: 380px;
   width: 340px;
   padding: 16px 16px 14px;
   --hero-float-y: -9px;
@@ -424,18 +441,37 @@
   line-height: 16px;
 }
 
-.badge--purple { background: rgba(184, 153, 235, 0.18); color: #8a47fa; }
-.badge--green  { background: rgba(113, 221, 140, 0.22); color: #29c04e; }
-.badge--blue   { background: rgba(125, 187, 255, 0.22); color: #3a86da; }
-.badge--yellow { background: rgba(255, 204, 0, 0.22);   color: #d4b125; }
-.badge--gray   { background: rgba(0, 0, 0, 0.08);       color: rgba(0, 0, 0, 0.5); }
+.badge--purple {
+  background: rgba(184, 153, 235, 0.18);
+  color: #8a47fa;
+}
+
+.badge--green {
+  background: rgba(113, 221, 140, 0.22);
+  color: #29c04e;
+}
+
+.badge--blue {
+  background: rgba(125, 187, 255, 0.22);
+  color: #3a86da;
+}
+
+.badge--yellow {
+  background: rgba(255, 204, 0, 0.22);
+  color: #d4b125;
+}
+
+.badge--gray {
+  background: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.5);
+}
 
 /* ==========================================================================
    Card: Historical Temp (center-right, small)
    ========================================================================== */
 
 .dash-card--temp {
-  left: 680px;
+  left: 740px;
   top: 380px;
   width: 170px;
   padding: 16px 16px 12px;
@@ -454,8 +490,8 @@
 
 .dash-card--quality {
   right: -40px;
-  top: 320px;
-  width: 250px;
+  top: 260px;
+  width: 270px;
   padding: 18px 18px 18px;
   --hero-float-y: -11px;
 }
@@ -511,8 +547,14 @@
   left: 48px;
   z-index: 3;
 }
-.quality-circle--orange .quality-circle__pct { font-size: 34px; }
-.quality-circle--orange .quality-circle__name { font-size: 13px; }
+
+.quality-circle--orange .quality-circle__pct {
+  font-size: 34px;
+}
+
+.quality-circle--orange .quality-circle__name {
+  font-size: 13px;
+}
 
 .quality-circle--blue {
   width: 90px;
@@ -523,8 +565,14 @@
   left: 10px;
   z-index: 2;
 }
-.quality-circle--blue .quality-circle__pct { font-size: 18px; }
-.quality-circle--blue .quality-circle__name { font-size: 11px; }
+
+.quality-circle--blue .quality-circle__pct {
+  font-size: 18px;
+}
+
+.quality-circle--blue .quality-circle__name {
+  font-size: 11px;
+}
 
 .quality-circle--purple {
   width: 84px;
@@ -535,15 +583,21 @@
   left: 132px;
   z-index: 1;
 }
-.quality-circle--purple .quality-circle__pct { font-size: 20px; }
-.quality-circle--purple .quality-circle__name { font-size: 11px; }
+
+.quality-circle--purple .quality-circle__pct {
+  font-size: 20px;
+}
+
+.quality-circle--purple .quality-circle__name {
+  font-size: 11px;
+}
 
 /* ==========================================================================
    Card: 12 °C Optimal
    ========================================================================== */
 
 .dash-card--optimal {
-  left: 680px;
+  left: 740px;
   top: 570px;
   width: 134px;
   padding: 18px 20px 16px;
@@ -566,7 +620,7 @@
 
 .dash-card--performance {
   right: 0px;
-  top: 640px;
+  top: 600px;
   width: 160px;
   padding: 18px 20px 14px;
   --hero-float-y: -10px;
@@ -592,8 +646,13 @@
   border-top: 1px dashed rgba(0, 0, 0, 0.12);
 }
 
-.perf-chart::before { top: 0; }
-.perf-chart::after  { top: 50%; }
+.perf-chart::before {
+  top: 0;
+}
+
+.perf-chart::after {
+  top: 50%;
+}
 
 .perf-group {
   position: relative;
@@ -623,16 +682,21 @@
   min-height: 4px;
 }
 
-.perf-bar--light { background: #c8d1f0; }
-.perf-bar--dark  { background: #7a8ee0; }
+.perf-bar--light {
+  background: #c8d1f0;
+}
+
+.perf-bar--dark {
+  background: #7a8ee0;
+}
 
 /* ==========================================================================
    Card: Clock (floating small)
    ========================================================================== */
 
 .dash-card--clock {
-  left: 840px;
-  top: 660px;
+  left: 900px;
+  top: 680px;
   width: 78px;
   height: 78px;
   display: flex;
@@ -649,7 +713,7 @@
 
 .dash-card--report {
   left: 140px;
-  top: 720px;
+  top: 800px;
   width: 640px;
   display: grid;
   grid-template-columns: auto 1fr auto auto;
@@ -725,26 +789,31 @@
 }
 
 @keyframes hero-card-float {
+
   0%,
   100% {
     transform: translate3d(0, 0, 0);
   }
+
   50% {
     transform: translate3d(0, var(--hero-float-y, -10px), 0);
   }
 }
 
 @keyframes hero-center-float {
+
   0%,
   100% {
     transform: translate3d(0, 0, 0);
   }
+
   50% {
     transform: translate3d(0, -14px, 0);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .hero__centerpiece,
   .hero__centerpiece-art,
   .dash-card {

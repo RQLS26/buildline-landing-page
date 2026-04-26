@@ -196,8 +196,8 @@ const { t } = useI18n()
 
     <div class="hero__cta">
       <label class="visually-hidden" for="hero-email">Your email</label>
-      <input id="hero-email" type="email" class="input" placeholder="Mail" style="border-radius: 999px; padding-left: 20px;">
-      <a href="#demo" class="btn btn--primary" style="border-radius: 999px;">Try a demo</a>
+      <input id="hero-email" type="email" class="input" placeholder="Mail" style="padding-left: 20px;">
+      <a href="#demo" class="btn btn--primary" style="background-color: #6798EE; border-color: #6798EE;">Try a demo</a>
     </div>
   </section>
 </template>
