@@ -141,93 +141,83 @@ onMounted(() => {
     </div>
 
     <!-- ========== Pricing Tab ========== -->
-    <div v-if="activeTab === 'pricing'" class="pricing-content">
-      <div class="pricing-header">
-        <h3 class="pricing-header__title">Our Founding Team</h3>
-        <p class="pricing-header__subtitle">Choose the Plan that Fits Your Construction Business</p>
-        <div class="pricing-toggle">
-          <button type="button" class="pricing-toggle__btn pricing-toggle__btn--active">Monthly</button>
-          <button type="button" class="pricing-toggle__btn">Annualy</button>
+    <div v-if="activeTab === 'pricing'" class="signup-shell">
+      <div class="signup-shell__stage signup-shell__stage--pricing">
+        <img class="signup-shell__art signup-shell__art--left" src="/assets/images/final-section/signup-art-left.png" alt="" loading="eager" decoding="async">
+        <img class="signup-shell__art signup-shell__art--right" src="/assets/images/final-section/signup-art-right.png" alt="" loading="eager" decoding="async">
+
+        <div class="pricing-card-wrapper">
+          <h3 class="signup-card__title">Our Founding Team</h3>
+          <p class="signup-card__subtitle">Choose the Plan that Fits Your Construction Business</p>
+          <div class="pricing-toggle">
+            <button type="button" class="pricing-toggle__btn pricing-toggle__btn--active">Monthly</button>
+            <button type="button" class="pricing-toggle__btn">Annualy</button>
+          </div>
+
+          <div class="pricing-grid">
+            <article class="pricing-card">
+              <h4 class="pricing-card__name">Project Base Plan</h4>
+              <p class="pricing-card__desc">Designed for construction SMEs seeking to digitize their procurement workflow, eliminate WhatsApp clutter, and ensure project-based budget control</p>
+              <div class="pricing-card__price">
+                <strong>$100</strong> <span>/Per month</span>
+              </div>
+              <a href="#contact" class="btn pricing-card__cta pricing-card__cta--primary">Get Standard Plan</a>
+              <hr class="pricing-card__divider">
+              <h5 class="pricing-card__features-title">Features</h5>
+              <ul class="pricing-card__features">
+                <li>Simultaneous management of up to 3 projects.</li>
+                <li>Unlimited order creation from the field</li>
+                <li>Hierarchical approval flow (Resident -> Logistics).</li>
+                <li>Automatic notifications when a budget item is exceeded</li>
+                <li>Centralized history of suppliers and quotes</li>
+                <li>Access for resident engineers and purchasing managers.</li>
+              </ul>
+            </article>
+
+            <article class="pricing-card pricing-card--enterprise">
+              <h4 class="pricing-card__name">Multi-Project Enterprise</h4>
+              <p class="pricing-card__desc">The comprehensive solution for construction companies with high operational activity that require centralized auditing, advanced financial reporting, and end-to-end multi-site management.</p>
+              <div class="pricing-card__price">
+                <strong>$250</strong><span>/Per month</span>
+              </div>
+              <a href="#contact" class="btn pricing-card__cta pricing-card__cta--filled">Get Standard Plan</a>
+              <hr class="pricing-card__divider">
+              <h5 class="pricing-card__features-title">Features</h5>
+              <ul class="pricing-card__features">
+                <li>Unlimited scale in all your projects nationwide.</li>
+                <li>All Project Base features included.</li>
+                <li>Automatic generation of comparative quotation charts.</li>
+                <li>Digitization of delivery notes by scanning with a cell phone.</li>
+                <li>Reports on cost deviations and profitability by project.</li>
+                <li>24/7 technical support and integration with local accounting systems.</li>
+              </ul>
+            </article>
+          </div>
         </div>
-      </div>
-
-      <div class="pricing-grid">
-        <article class="pricing-card">
-          <h4 class="pricing-card__name">Project Base Plan</h4>
-          <p class="pricing-card__desc">Designed for construction SMEs seeking to digitize their procurement workflow, eliminate WhatsApp clutter, and ensure project-based budget control</p>
-          <div class="pricing-card__price">
-            <strong>$100</strong> <span>/Per month</span>
-          </div>
-          <a href="#contact" class="btn pricing-card__cta pricing-card__cta--primary">Get Standard Plan</a>
-          <hr class="pricing-card__divider">
-          <h5 class="pricing-card__features-title">Features</h5>
-          <ul class="pricing-card__features">
-            <li>Simultaneous management of up to 3 projects.</li>
-            <li>Unlimited order creation from the field</li>
-            <li>Hierarchical approval flow (Resident -> Logistics).</li>
-            <li>Automatic notifications when a budget item is exceeded</li>
-            <li>Centralized history of suppliers and quotes</li>
-            <li>Access for resident engineers and purchasing managers.</li>
-          </ul>
-        </article>
-
-        <article class="pricing-card pricing-card--enterprise">
-          <h4 class="pricing-card__name">Multi-Project Enterprise</h4>
-          <p class="pricing-card__desc">The comprehensive solution for construction companies with high operational activity that require centralized auditing, advanced financial reporting, and end-to-end multi-site management.</p>
-          <div class="pricing-card__price">
-            <strong>$250</strong><span>/Per month</span>
-          </div>
-          <a href="#contact" class="btn pricing-card__cta">Get Standard Plan</a>
-          <hr class="pricing-card__divider">
-          <h5 class="pricing-card__features-title">Features</h5>
-          <ul class="pricing-card__features">
-            <li>Unlimited scale in all your projects nationwide.</li>
-            <li>All Project Base features included.</li>
-            <li>Automatic generation of comparative quotation charts.</li>
-            <li>Digitization of delivery notes by scanning with a cell phone.</li>
-            <li>Reports on cost deviations and profitability by project.</li>
-            <li>24/7 technical support and integration with local accounting systems.</li>
-          </ul>
-        </article>
       </div>
     </div>
   </section>
 </template>
 
 <style scoped>
-/* Pricing section — matches signup-card aesthetic */
-.pricing-content {
-  margin-top: 48px;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
+/* Pricing tab — same wrapper as signup form */
+.signup-shell__stage--pricing {
   align-items: center;
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 
-.pricing-header {
+.pricing-card-wrapper {
+  position: relative;
+  z-index: 2;
   text-align: center;
-  margin-bottom: 40px;
-}
-
-.pricing-header__title {
-  font-family: var(--font-family-display);
-  font-size: clamp(28px, 2.6vw, 42px);
-  font-weight: 400;
-  color: var(--color-text-primary);
-  margin-bottom: 12px;
-}
-
-.pricing-header__subtitle {
-  font-size: clamp(16px, 1.1vw, 20px);
-  color: rgba(30, 30, 30, 0.58);
-  margin-top: 0;
+  width: 100%;
+  max-width: 960px;
 }
 
 .pricing-toggle {
   display: inline-flex;
-  margin-top: 24px;
+  margin: 24px 0 36px;
   border: 1px solid #dfe7fb;
   border-radius: 999px;
   overflow: hidden;
@@ -256,71 +246,53 @@ onMounted(() => {
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 32px;
-  max-width: 960px;
-  width: 100%;
+  gap: 28px;
 }
 
 .pricing-card {
   background: #fff;
   border: 1px solid #dfe7fb;
   border-radius: 28px;
-  padding: 40px 36px;
+  padding: 36px 32px;
   box-shadow: 0 16px 34px rgba(30, 30, 30, 0.1);
   text-align: center;
 }
 
 .pricing-card--enterprise {
-  background: #57585d;
-  border-color: transparent;
-  color: #fff;
+  background: #fff;
+  border-color: #9fb4ef;
+  box-shadow: 0 16px 34px rgba(103, 152, 238, 0.18);
 }
 
 .pricing-card__name {
   font-family: var(--font-family-display);
-  font-size: clamp(22px, 1.8vw, 28px);
+  font-size: clamp(20px, 1.6vw, 26px);
   font-weight: 400;
   color: var(--color-text-primary);
-  margin-bottom: 14px;
-}
-
-.pricing-card--enterprise .pricing-card__name {
-  color: #fff;
+  margin-bottom: 12px;
 }
 
 .pricing-card__desc {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.5;
   color: rgba(30, 30, 30, 0.55);
-  margin-bottom: 28px;
-}
-
-.pricing-card--enterprise .pricing-card__desc {
-  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 24px;
 }
 
 .pricing-card__price {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .pricing-card__price strong {
   font-family: var(--font-family-display);
-  font-size: clamp(30px, 2.5vw, 42px);
+  font-size: clamp(28px, 2.2vw, 38px);
   font-weight: 400;
   color: #9fb4ef;
 }
 
-.pricing-card--enterprise .pricing-card__price strong {
-  color: #fff;
-}
-
 .pricing-card__price span {
   font-size: 16px;
-  color: rgba(30, 30, 30, 0.45);
-}
-
-.pricing-card--enterprise .pricing-card__price span {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(30, 30, 30, 0.42);
 }
 
 .pricing-card__cta {
@@ -345,37 +317,29 @@ onMounted(() => {
   background: #7f99e5;
 }
 
-.pricing-card--enterprise .pricing-card__cta {
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+.pricing-card__cta--filled {
+  background: rgba(159, 180, 239, 0.12);
+  color: #7d96ea;
+  border: 1px solid #dfe7fb;
 }
 
-.pricing-card--enterprise .pricing-card__cta:hover {
-  background: rgba(255, 255, 255, 0.25);
+.pricing-card__cta--filled:hover {
+  background: rgba(159, 180, 239, 0.22);
 }
 
 .pricing-card__divider {
   border: none;
   border-top: 1px solid #eff0f6;
-  margin: 28px 0;
-}
-
-.pricing-card--enterprise .pricing-card__divider {
-  border-top-color: rgba(255, 255, 255, 0.15);
+  margin: 24px 0;
 }
 
 .pricing-card__features-title {
   font-family: var(--font-family-display);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   text-align: left;
   color: var(--color-text-primary);
-  margin-bottom: 14px;
-}
-
-.pricing-card--enterprise .pricing-card__features-title {
-  color: #fff;
+  margin-bottom: 12px;
 }
 
 .pricing-card__features {
@@ -386,14 +350,10 @@ onMounted(() => {
 }
 
 .pricing-card__features li {
-  padding: 5px 0;
-  font-size: 15px;
+  padding: 4px 0;
+  font-size: 14px;
   line-height: 1.5;
-  color: rgba(30, 30, 30, 0.58);
-}
-
-.pricing-card--enterprise .pricing-card__features li {
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(30, 30, 30, 0.55);
 }
 
 .overview-rail__item--active {
