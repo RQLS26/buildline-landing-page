@@ -1,6 +1,7 @@
 <script setup>
 import TheHeader from './shared/presentation/components/TheHeader.vue'
 import TheHero from './value-proposition/presentation/components/TheHero.vue'
+import AppFeatures from './value-proposition/presentation/components/AppFeatures.vue'
 </script>
 
 <template>
@@ -8,6 +9,7 @@ import TheHero from './value-proposition/presentation/components/TheHero.vue'
     <TheHeader />
     <main>
       <TheHero />
+      <AppFeatures />
       <!-- We will add more sections here -->
     </main>
   </div>
