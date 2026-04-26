@@ -1,7 +1,37 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
+import { onMounted } from 'vue'
 
 const { t } = useI18n()
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Use existing CSS classes from layout.css
+          if (entry.target.classList.contains('why-section__header')) {
+            entry.target.classList.add('why-section__header--visible')
+          } else if (entry.target.classList.contains('why-card')) {
+            entry.target.classList.add('why-card--visible')
+          }
+        }
+      })
+    },
+    { threshold: 0.15 }
+  )
+
+  const header = document.querySelector('#why .why-section__header')
+  if (header) {
+    header.classList.add('why-section__header--motion')
+    observer.observe(header)
+  }
+
+  document.querySelectorAll('#why .why-card').forEach((card) => {
+    card.classList.add('why-card--motion')
+    observer.observe(card)
+  })
+})
 </script>
 
 <template>

@@ -1,7 +1,22 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
+import { onMounted } from 'vue'
 
 const { t } = useI18n()
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed')
+        }
+      })
+    },
+    { threshold: 0.12 }
+  )
+  document.querySelectorAll('#about-product [data-reveal]').forEach((el) => observer.observe(el))
+})
 </script>
 
 <template>
@@ -10,7 +25,7 @@ const { t } = useI18n()
 
     <div class="product-showcase__stack">
       <!-- Panel 1: Budget Dashboard (image left, text right) -->
-      <article class="showcase-panel showcase-panel--thermal">
+      <article class="showcase-panel showcase-panel--thermal" data-reveal style="--reveal-delay: 0ms">
         <div class="showcase-panel__visual showcase-panel__visual--thermal" aria-hidden="true">
           <img
             class="showcase-shot showcase-shot--thermal"
@@ -54,7 +69,7 @@ const { t } = useI18n()
       </article>
 
       <!-- Panel 2: Alerts (text left, image right — reversed) -->
-      <article class="showcase-panel showcase-panel--alerts showcase-panel--reverse">
+      <article class="showcase-panel showcase-panel--alerts showcase-panel--reverse" data-reveal style="--reveal-delay: 100ms">
         <div class="showcase-panel__copy showcase-panel__copy--red">
           <h3 class="showcase-panel__title">
             <span>Approvals that reach the right manager, at the </span>
@@ -98,7 +113,7 @@ const { t } = useI18n()
       </article>
 
       <!-- Panel 3: Cost History (image left, text right) -->
-      <article class="showcase-panel showcase-panel--history">
+      <article class="showcase-panel showcase-panel--history" data-reveal style="--reveal-delay: 100ms">
         <div class="showcase-panel__visual showcase-panel__visual--history" aria-hidden="true">
           <img
             class="showcase-shot showcase-shot--history"
@@ -141,7 +156,7 @@ const { t } = useI18n()
       </article>
 
       <!-- Panel 4: Multi-site (text left, image right — reversed) -->
-      <article class="showcase-panel showcase-panel--sites showcase-panel--reverse">
+      <article class="showcase-panel showcase-panel--sites showcase-panel--reverse" data-reveal style="--reveal-delay: 100ms">
         <div class="showcase-panel__copy showcase-panel__copy--blue">
           <h3 class="showcase-panel__title">
             <span>Complete control of your projects and supplies in </span>
