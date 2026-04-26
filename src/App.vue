@@ -5,6 +5,7 @@ import AppFeatures from './value-proposition/presentation/components/AppFeatures
 import ProductShowcase from './value-proposition/presentation/components/ProductShowcase.vue'
 import WhyBuildLine from './value-proposition/presentation/components/WhyBuildLine.vue'
 import OverviewSignup from './value-proposition/presentation/components/OverviewSignup.vue'
+import SiteFooter from './shared/presentation/components/SiteFooter.vue'
 </script>
 
 <template>
@@ -16,8 +17,8 @@ import OverviewSignup from './value-proposition/presentation/components/Overview
       <ProductShowcase />
       <WhyBuildLine />
       <OverviewSignup />
-      <!-- We will add footer next -->
     </main>
+    <SiteFooter />
   </div>
 </template>
 
