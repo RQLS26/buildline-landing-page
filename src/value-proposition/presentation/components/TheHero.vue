@@ -18,10 +18,7 @@ const { t } = useI18n()
       </div>
       
       <div class="hero-image-wrapper">
-        <!-- We will use a placeholder styling since the exact image is complex -->
-        <div class="mockup-placeholder">
-          <p>Mockup Design Integration</p>
-        </div>
+        <img src="../../../assets/hero-image.png" alt="BuildLine Dashboard Mockup" class="hero-image" />
       </div>
     </div>
   </section>
@@ -103,20 +100,16 @@ const { t } = useI18n()
 .hero-image-wrapper {
   width: 100%;
   max-width: 900px;
-  height: 500px;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
+  margin-top: 20px;
 }
 
-.mockup-placeholder {
-  color: #aaa;
-  font-size: 1.2rem;
-  font-weight: 500;
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 </style>
