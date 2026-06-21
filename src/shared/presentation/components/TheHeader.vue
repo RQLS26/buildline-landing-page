@@ -26,8 +26,8 @@ const { t } = useI18n()
       </ul>
 
       <div class="navbar__actions">
-        <a href="https://buildline-3jcvvnh4t-team-project0.vercel.app/iam/sign-in" class="btn" style="background-color: #E3E3E3; color: #333; padding: 0 20px;">Sign in</a>
-        <a href="https://buildline-3jcvvnh4t-team-project0.vercel.app/iam/sign-up" class="btn btn--primary" style="background-color: #6798EE; border-color: #6798EE;">Register now</a>
+        <a href="https://buildline-delta.vercel.app/iam/sign-in" class="btn" style="background-color: #E3E3E3; color: #333; padding: 0 20px;">Sign in</a>
+        <a href="https://buildline-delta.vercel.app/iam/sign-up" class="btn btn--primary" style="background-color: #6798EE; border-color: #6798EE;">Register now</a>
       </div>
 
       <div class="navbar__mobile-menu" id="mobile-nav-panel" hidden>
